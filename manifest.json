@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "UO auto logger",
+  "version": "1.1",
+  "description": "Automatycznie loguje użytkownika do sieci UO",
+  "icons": {
+    "24": "icons/LogoUOlight.svg",
+    "48": "icons/LogoUOlight.svg",
+    "96": "icons/LogoUOlight.svg"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": "icons/LogoUOlight.svg",
+    "default_title": "UO logger",
+    "default_popup": "popup/index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://uonet.uni.opole.pl/login"
+      ],
+      "js": [
+        "main.js"
+      ]
+    }
+  ]
+}

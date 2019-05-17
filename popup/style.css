@@ -1,0 +1,40 @@
+:root{
+    --main-color:#E95420;
+}
+*{
+    font-family: 'Noto Sans', sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.container * {
+    margin: 0.5rem;
+
+}
+#header{
+    color:#2a3a4a;
+}
+.custom-input{
+    box-shadow: none;
+    border:1px lightgray solid;
+    border-radius: 5px;
+    padding: 5px;
+}
+.custom-input:focus{
+    border-color:var(--main-color);
+}
+button{
+    box-shadow: none;
+    border:1px lightgray solid;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.1s
+}
+button:hover{
+    background-color:var(--main-color);
+    border-color: var(--main-color);
+    color:white;
+}
